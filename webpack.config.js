@@ -1,12 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
-const extractTextPlugin = require('extract-text-webpack-plugin');
 
  module.exports = {
-     entry: './src/main.js',
+     entry: {
+        server: './src/server',
+        client: './src/client',
+        init: './src/init'
+    },
      output: {
          path: path.resolve(__dirname, 'dist'),
-         filename: '[name].js'
+         filename: '[name].bundle.js'
      },
      module: {
          loaders: [
@@ -27,12 +30,5 @@ const extractTextPlugin = require('extract-text-webpack-plugin');
                 }
             }
          ]
-     },
-     stats: {
-         colors: true
-     },
-     devtool: 'source-map',
-     plugins: [
-        new extractTextPlugin('styles.css')
-     ]
+     }
  };
