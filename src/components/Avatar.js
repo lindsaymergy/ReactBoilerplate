@@ -1,3 +1,6 @@
+// This is an alternative coding style for react which uses object notation. (less than ideal)
+// This approach is being deprecated and should not be used.
+
 var React = require('react');
 
 var Avatar = React.createClass({

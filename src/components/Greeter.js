@@ -1,3 +1,5 @@
+// This is the preferred coding style (ES6 native)
+
 import React, {Component} from 'react';
 
 class Greeter extends Component {

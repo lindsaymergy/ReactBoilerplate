@@ -15,7 +15,8 @@
   "scripts": {
     "start": "http-server",
     "watch": "npm-watch",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "build": "node build.js"
   },
   "author": "",
   "license": "ISC",
