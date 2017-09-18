@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Boilerplate WebPack</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.js"></script>
+    </head>
+    <body>
+        <!-- -->
+        <h1>This is a Greeter</h1>
+        <div id="greeter"></div>
+
+        <h1>This is a NameTag</h1>
+        <div id="tag"></div>
+
+        <h1>This is a Avatar</h1>
+        <div id="avatar"></div>
+
+        <!-- -->
+        <h1>This is another Greeter (It has its own identity, and won't collide with the first)</h1>
+        <div id="greeter1"></div>
+
+        <h1>This is another NameTag (It also has its own identity, and won't collide with the first)</h1>
+        <div id="tag1"></div>
+
+        <h1>This is another Avatar (You get the picture...)</h1>
+        <div id="avatar1"></div>
+
+        <!-- -->
+        DYNAMICALLY RENDERED BANK
+        <div id="dynamic"></div>
+        <div id="tim"></div>
+
+        <script src="./init.bundle.js"></script>
+        <script>
+            var ReactComponents = [];
+
+            function callback() {
+                ReactComponents.push(this);
+            }
+
+            // This renders the widget to an element
+            renderReactWidget(Components.NameTag, { name: 'This is the one I\'m working with' }, 'dynamic', callback);
+            renderReactWidget(Components.Avatar, { alt: 'This is what I\'m talkin about', user: 'timw255' }, 'tim', callback);
+
+            function renderReactWidget(component, props, parentId, callback) {
+                component = component.default || component;
+
+                ReactDOM.render(
+                    React.createElement(component, props, null),
+                    document.getElementById(parentId),
+                    callback
+                );
+            }
+        </script>
+    </body>
+</html>
