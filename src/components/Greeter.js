@@ -1,6 +1,7 @@
 // This is the preferred coding style (ES6 native)
 
 import React, {Component} from 'react';
+import Button from './Button';
 
 class Greeter extends Component {
     constructor(){
@@ -21,7 +22,7 @@ class Greeter extends Component {
         return(
             <div>
                 <div>I've Said Hello {this.state.currentNumber} Times.</div>
-                <button type="button" onClick={this.handleClick}>Say Hello, Bitch</button>
+                <Button click={this.handleClick} text="Say Hello Biotch" />
             </div>
         );
     }
