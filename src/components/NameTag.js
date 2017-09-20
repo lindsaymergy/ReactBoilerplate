@@ -12,7 +12,7 @@ class NameTag extends Component {
 
     render() {
         return (
-            <div className={this.props.class}>Hello {this.state.name}</div>
+            <div className="red">Hello, my name is {this.state.name}</div>
         );
     }
 };

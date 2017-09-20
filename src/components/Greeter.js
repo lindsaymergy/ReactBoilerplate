@@ -21,8 +21,8 @@ class Greeter extends Component {
     render(){
         return(
             <div>
-                <div>I've Said Hello {this.state.currentNumber} Times.</div>
-                <Button click={this.handleClick} text="Say Hello Biotch" />
+                <div>I've said hello {this.state.currentNumber} times!!</div>
+                <Button click={this.handleClick} text="Say Hello" />
             </div>
         );
     }
