@@ -7,7 +7,7 @@ export default class Counter extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(this.tick.bind(this), 1000);
+    this.interval = setInterval(this.tick.bind(this), 10);
   }
 
   tick() {

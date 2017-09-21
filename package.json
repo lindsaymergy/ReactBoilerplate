@@ -2,7 +2,6 @@
   "name": "babelwebpack",
   "version": "1.0.0",
   "description": "boilerplate babel environment with webpack",
-  "main": "src/main.js",
   "watch": {
     "webpack": {
       "patterns": [
@@ -13,10 +12,10 @@
     }
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "watch": "npm-watch",
-    "webpack": "webpack",
-    "build": "node build.js"
+    "build": "webpack --config webpack/prod.config.js",
+    "start": "webpack-dev-server --config webpack/dev.config.js",
+    "analyze": "webpack --config webpack/analyze.config.js",
+    "deploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -32,10 +31,11 @@
     "bootstrap-loader": "^2.2.0",
     "css-loader": "^0.28.7",
     "expose-loader": "^0.7.3",
-    "extract-text-webpack-plugin": "^3.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "http-server": "^0.10.0",
+    "merge": "^1.2.0",
     "node-sass": "^4.5.3",
     "npm-watch": "^0.2.0",
     "react-hot-loader": "^3.0.0-beta.7",
@@ -44,11 +44,14 @@
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webpack": "^2.7.0",
+    "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^2.8.2",
-    "webpack-hot-middleware": "^2.19.1"
+    "webpack-hot-middleware": "^2.19.1",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {
     "react": "^15.6.1",

@@ -4,7 +4,8 @@
 }
 
 .red {
-    color:green;
+    color: blue;
     font-size: 26px;
-    font-weight: bold;
+    font-weight: normal;
+    float: left;
 }

@@ -14,12 +14,16 @@ class Avatar extends Component {
 
 	render() {
 		return (
-			<img
-				src={this.getPhotoUrl()}
-				alt={this.state.alt}
-				width={150}
-				height={150}
-				className="commentPhoto widget" />
+			<div>
+				<img
+					src={this.getPhotoUrl()}
+					alt={this.state.alt}
+					width={200}
+					height={200}
+					className="commentPhoto widget" /><br />
+				<a href={'https://github.com/' + this.state.user}>{this.state.user}</a>
+			</div>
+			
 		);
 	}
 

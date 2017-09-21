@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Style from './nametag.css'
+import Style from './styles/nametag.css'
 
 class NameTag extends Component {
 
