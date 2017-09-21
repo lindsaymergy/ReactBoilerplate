@@ -1,0 +1,11 @@
+.big {
+    font-family: sans-serif;
+    font-size: 40px;
+}
+
+.red {
+    color: red;
+    font-size: 26px;
+    font-weight: normal;
+    float: left;
+}

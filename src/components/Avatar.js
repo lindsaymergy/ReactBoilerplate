@@ -2,6 +2,7 @@
 // This approach is being deprecated and should not be used.
 
 import React, {Component} from 'react';
+import Style from './styles/avatar.css'
 
 class Avatar extends Component {
 	constructor(props){
@@ -14,18 +15,23 @@ class Avatar extends Component {
 
 	render() {
 		return (
-			<img
-				src={this.getPhotoUrl()}
-				alt={this.state.alt}
-				width={50}
-				height={50}
-				className="commentPhoto widget"
-			/>
+			<div className="avatar">
+				<span>{this.state.user}</span>
+				<a href={'https://github.com/' + this.state.user}>
+					<img
+						src={this.getPhotoUrl()}
+						alt={this.state.alt}
+						width={200}
+						height={200}
+						className="commentPhoto widget" /><br />
+				</a>
+			</div>
+			
 		);
 	}
 
 	getPhotoUrl() {
-		return 'https://avatars.githubusercontent.com/' + this.state.user +' ?s=50';
+		return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=300';
 	}
 };
 
