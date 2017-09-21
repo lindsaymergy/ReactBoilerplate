@@ -24,7 +24,7 @@ module.exports = merge(baseConfig, {
                     { loader: "style-loader" },
                     { loader: "css-loader" }
                 ],
-                exclude: /(node_modules|bower_components)/
+                exclude: /node_modules/
             }
          ]
      },
