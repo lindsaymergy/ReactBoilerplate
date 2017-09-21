@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
  module.exports = {
-     target: "web",
+     entry: [ 'babel-polyfill' ],
      devServer: {
         host: 'localhost',
         port: 3000,
@@ -12,8 +12,11 @@ const path = require('path');
      module: {
          loaders: [
             {
-                test: /\.jsx?$/,
-                loaders: 'babel-loader',
+                test: /\.js?$/,
+                use: [
+                    'babel-loader',
+                    //'eslint-loader'
+                ],
                 exclude: /(node_modules|bower_components)/
             }
          ]

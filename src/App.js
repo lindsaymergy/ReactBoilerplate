@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
-import Button from './components/Button';
 import Counter from './components/Counter';
 import NameTag from './components/NameTag';
 import Avatar from './components/Avatar';
+import Greeter from './components/Greeter';
 
 class App extends Component {
 
@@ -15,11 +15,18 @@ class App extends Component {
     render(){
         return (
             <div>
-                <Avatar user="harveydogg" />
-                <Button text="two" click={this.handleClick} />
-                <Counter />
-                <NameTag name="Favio" />
-                <Button click={this.handleClick} text="THIS IS SO COOL!" />
+                <div style={{
+                    display: 'flex'
+                }}>
+                    <Avatar user="benbakle" />
+                    <Avatar user="andyglassley" />
+                    <Avatar user="dfederspiel" />
+                    <Avatar user="matthewtruty" />
+                </div>
+                <div>
+                    <Counter />
+                    <NameTag name="Rick James" />
+                </div>
             </div>
         )
     }

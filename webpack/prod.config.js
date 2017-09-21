@@ -28,7 +28,7 @@ module.exports = merge(baseConfig, {
                         'css-loader?importLoaders=1',
                     ],
                 }),
-                exclude: /(node_modules|bower_components)/
+                exclude: /node_modules/
             }
          ]
      },
@@ -49,7 +49,6 @@ module.exports = merge(baseConfig, {
                 'NODE_ENV': JSON.stringify('production')
             }
         })
-        //new webpack.optimize.CommonsChunkPlugin({ name : 'vendor', filename: 'vendor.bundle.js'})
     ],
     devtool: 'cheap-module-source-map'
 });
