@@ -1,12 +1,4 @@
-//const webpack = require('webpack');
-const path = require('path');
-
 module.exports = {
-    resolve: {
-        modules: [
-            path.resolve('./src')
-        ]
-    },
     entry: [ 'babel-polyfill' ],
     devServer: {
         host: 'localhost',
