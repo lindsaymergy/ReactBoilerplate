@@ -2,37 +2,36 @@
 // This approach is being deprecated and should not be used.
 
 import React, {Component} from 'react';
-import Style from './styles/avatar.css'
+import '../styles/avatar.css';
 
 class Avatar extends Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			"alt": props.alt,
-			"user": props.user
-		}
-	}
+    constructor(props){
+        super(props);
+        this.state = {
+            'alt': props.alt,
+            'user': props.user
+        };
+    }
 
-	render() {
-		return (
-			<div className="avatar">
-				<span>{this.state.user}</span>
-				<a href={'https://github.com/' + this.state.user}>
-					<img
-						src={this.getPhotoUrl()}
-						alt={this.state.alt}
-						width={200}
-						height={200}
-						className="commentPhoto widget" /><br />
-				</a>
-			</div>
-			
-		);
-	}
+    render() {
+        return (
+            <div className="avatar">
+                <span>{this.state.user}</span>
+                <a href={'https://github.com/' + this.state.user}>
+                    <img
+                        src={this.getPhotoUrl()}
+                        alt={this.state.alt}
+                        width={200}
+                        height={200}
+                        className="commentPhoto widget" /><br />
+                </a>
+            </div>
+        );
+    }
 
-	getPhotoUrl() {
-		return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=300';
-	}
-};
+    getPhotoUrl() {
+        return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=300';
+    }
+}
 
 export default Avatar;

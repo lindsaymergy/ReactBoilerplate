@@ -8,7 +8,7 @@ class Greeter extends Component {
         super();
         this.state = {
             currentNumber: 0
-        }
+        };
 
         this.handleClick = this.handleClick.bind(this);
     }
@@ -21,7 +21,7 @@ class Greeter extends Component {
     render(){
         return(
             <div>
-                <div>I've said hello {this.state.currentNumber} times!!</div>
+                <div>I&squot;ve said hello {this.state.currentNumber} times!!</div>
                 <Button click={this.handleClick} text="Say Hello" />
             </div>
         );

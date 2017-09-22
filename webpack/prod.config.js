@@ -15,23 +15,20 @@ module.exports = merge(baseConfig, {
         path: path.resolve(__dirname, '../build'),
         filename: '[name].bundle.js'
     },
-    plugins: [
-
-    ],
     module: {
-         loaders: [
+        loaders: [
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
+                    fallback: 'style-loader',
                     use: [
                         'css-loader?importLoaders=1',
                     ],
                 }),
                 exclude: /node_modules/
             }
-         ]
-     },
+        ]
+    },
     plugins: [
         // Extract imported CSS into own file
         new ExtractTextPlugin('[name].bundle.css'),

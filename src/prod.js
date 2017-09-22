@@ -1,2 +1,2 @@
 // Expose collection to UI
-var Components = require('expose-loader?Components!./components');
+require('expose-loader?Components!./components');

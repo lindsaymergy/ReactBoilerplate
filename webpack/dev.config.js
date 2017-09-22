@@ -11,23 +11,23 @@ module.exports = merge(baseConfig, {
         'webpack/hot/only-dev-server',
         './src/dev'
     ],
-     output: {
-         path: path.resolve(__dirname, 'dist'),
-         filename: 'bundle.js',
-         publicPath: '/static/'
-     },
-     module: {
-         loaders: [
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
+        publicPath: '/static/'
+    },
+    module: {
+        loaders: [
             {
                 test: /\.css$/,
                 use: [
-                    { loader: "style-loader" },
-                    { loader: "css-loader" }
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' }
                 ],
                 exclude: /node_modules/
             }
-         ]
-     },
+        ]
+    },
     devServer: {
         host: 'localhost',
         port: 3010,
@@ -37,6 +37,9 @@ module.exports = merge(baseConfig, {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development'),
+        })
     ]
 });

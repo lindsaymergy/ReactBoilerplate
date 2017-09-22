@@ -1,16 +1,21 @@
-const webpack = require('webpack');
+//const webpack = require('webpack');
 const path = require('path');
 
- module.exports = {
-     entry: [ 'babel-polyfill' ],
-     devServer: {
+module.exports = {
+    resolve: {
+        modules: [
+            path.resolve('./src')
+        ]
+    },
+    entry: [ 'babel-polyfill' ],
+    devServer: {
         host: 'localhost',
         port: 3000,
         historyApiFallback: true,
         hot: true,
     },
-     module: {
-         loaders: [
+    module: {
+        loaders: [
             {
                 test: /\.js?$/,
                 use: [
@@ -19,6 +24,6 @@ const path = require('path');
                 ],
                 exclude: /(node_modules|bower_components)/
             }
-         ]
-     }
- };
+        ]
+    }
+};
