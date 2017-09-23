@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+//require('expose-loader?Components!./components');
+
 const rootEl = document.getElementById('root');
 const render = (Component) =>
 {

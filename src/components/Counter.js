@@ -7,12 +7,12 @@ class Counter extends Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(this.tick.bind(this), 10);
+        this.interval = setInterval(this.tick.bind(this), 1000);
     }
 
     tick() {
         this.setState({
-            counter: this.state.counter + 10
+            counter: this.state.counter + 1
         });
     }
 
@@ -22,7 +22,7 @@ class Counter extends Component {
 
     render() {
         return (
-            <h2>Counter: {this.state.counter} Hello</h2>
+            <h2>Counter: {this.state.counter}</h2>
         );
     }
 }

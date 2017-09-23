@@ -4,9 +4,10 @@ import React, {Component} from 'react';
 import Greeter from './components/Greeter';
 import Counter from './components/Counter';
 import NameTag from './components/NameTag';
-import Avatar from './components/Avatar';
-import Home from './components/Home';
+import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
+
+import { data } from './data.json';
 
 class App extends Component {
 
@@ -24,9 +25,8 @@ class App extends Component {
                 </div>
                 <Greeter />
                 <div>
-                    <ArticleList />
+                    <ArticleList data={data} />
                 </div>
-                <Home />
                 <Counter />
             </div>
         );

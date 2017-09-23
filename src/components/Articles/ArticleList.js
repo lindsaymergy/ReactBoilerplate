@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import Article from './Article';
 import values from 'object.values';
 import DataApi from './services/DataApi';
-import { data } from './testData';
 
 class ArticleList extends Component {
 
     constructor(props) {
         super(props);
-        const api = new DataApi(data);
+        const api = new DataApi(props.data);
         this.state = {
             articles: api.getArticles(),
             authors: api.getAuthors()

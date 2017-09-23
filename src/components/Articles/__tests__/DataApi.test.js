@@ -1,9 +1,9 @@
 import DataApi from '../services/DataApi';
-import { data } from '../testData.json';
+import { data } from './data.json';
 
 const api = new DataApi(data);
 
-describe('DataApi', () => {
+describe('The DataApi', () => {
 
     it('exposes articles as an object', () => {
         const articles = api.getArticles();

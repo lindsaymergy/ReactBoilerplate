@@ -12,10 +12,12 @@ module.exports = {
                 test: /\.js?$/,
                 use: [
                     'babel-loader',
-                    //'eslint-loader'
                 ],
-                exclude: /(node_modules|bower_components)/
+                exclude: /node_modules/
             }
         ]
+    },
+    query: {
+        presets:[ 'es2015', 'react', 'stage-2' ]
     }
 };

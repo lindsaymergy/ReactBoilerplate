@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import '../styles/avatar.css';
+import './styles/avatar.css';
 
 class Avatar extends Component {
     constructor(props){
         super(props);
         this.state = {
+            'id': props.id,
             'alt': props.alt,
             'user': props.user
         };
