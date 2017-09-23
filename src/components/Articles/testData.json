@@ -26,7 +26,9 @@
         "authors": [
             {
                 "id": "1",
-                "firstName": "David Anthony"
+                "firstName": "David",
+                "lastName": "Federspiel",
+                "website": "https://github.com/dfederspiel" 
             }
         ]
     }

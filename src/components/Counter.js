@@ -12,7 +12,7 @@ class Counter extends Component {
 
     tick() {
         this.setState({
-            counter: this.state.counter + 1
+            counter: this.state.counter + 10
         });
     }
 
@@ -22,7 +22,7 @@ class Counter extends Component {
 
     render() {
         return (
-            <h2>Counter: {this.state.counter}</h2>
+            <h2>Counter: {this.state.counter} Hello</h2>
         );
     }
 }

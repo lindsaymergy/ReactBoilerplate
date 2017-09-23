@@ -6,12 +6,10 @@ import renderer from 'react-test-renderer';
 describe('ArticleList', () => {
 
     const testProps = {
-        articles: {
+        data: {
             a: { id: 'a' },
-            b: { id: 'b' }
-        },
-        articleActions: {
-            lookupAuthor: jest.fn(() => ({}))
+            b: { id: 'b' },
+            c: { id: 'c' },
         }
     };
 
@@ -19,11 +17,10 @@ describe('ArticleList', () => {
 
         const tree = renderer.create(
             <ArticleList
-                {...testProps}
+                data={testProps.data}
             />
         ).toJSON();
-
-        expect(tree.children.length).toBe(2);
+        expect(tree.children.length).toBe(3);
         expect(tree).toMatchSnapshot();
     });
 });

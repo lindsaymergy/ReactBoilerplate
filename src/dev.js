@@ -17,4 +17,4 @@ render(App);
 if (module.hot) module.hot.accept('./App', () => render(App));
 
 // Expose collection to UI
-require('expose-loader?Components!./components');
+//require('expose-loader?Components!./components');

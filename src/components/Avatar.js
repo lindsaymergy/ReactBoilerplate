@@ -1,6 +1,3 @@
-// This is an alternative coding style for react which uses object notation. (less than ideal)
-// This approach is being deprecated and should not be used.
-
 import React, {Component} from 'react';
 import '../styles/avatar.css';
 
@@ -21,8 +18,8 @@ class Avatar extends Component {
                     <img
                         src={this.getPhotoUrl()}
                         alt={this.state.alt}
-                        width={200}
-                        height={200}
+                        width={100}
+                        height={100}
                         className="commentPhoto widget" /><br />
                 </a>
             </div>
@@ -30,7 +27,7 @@ class Avatar extends Component {
     }
 
     getPhotoUrl() {
-        return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=300';
+        return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=100';
     }
 }
 

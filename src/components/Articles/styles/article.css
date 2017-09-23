@@ -1,0 +1,14 @@
+
+.article {
+    color: #369;
+}
+
+.article h2 {
+    font-family: sans-serif;
+    margin-bottom: 4px;
+}
+
+.article .date {
+    font-style: italic;
+    font-size: 14px;
+}

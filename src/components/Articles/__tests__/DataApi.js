@@ -3,8 +3,8 @@ import { data } from '../testData.json';
 
 const api = new DataApi(data);
 
-describe('DataApi', () =>{
-   
+describe('DataApi', () => {
+
     it('exposes articles as an object', () => {
         const articles = api.getArticles();
         const articleId = data.articles[0].id;
@@ -22,5 +22,5 @@ describe('DataApi', () =>{
         expect(authors).toHaveProperty(authorId);
         expect(authors[authorId].firstName).toBe(authorFirstName);
     });
-   
+
 });

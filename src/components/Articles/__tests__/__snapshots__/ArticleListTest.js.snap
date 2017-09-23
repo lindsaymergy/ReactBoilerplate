@@ -2,29 +2,86 @@
 
 exports[`ArticleList renders correctly 1`] = `
 <div>
-  <div>
-    <h2 />
-    <div />
+  <div
+    className="article"
+  >
+    <h2>
+      Article One
+    </h2>
+    <div
+      className="date"
+    >
+      01/01/2018
+    </div>
     <div>
       <a
-        href={undefined}
+        className="website"
+        href="https://github.com/dfederspiel"
       >
+        David
          
+        Federspiel
       </a>
     </div>
-    <div />
+    <div
+      className="body"
+    >
+      This is an article about Ones's
+    </div>
   </div>
-  <div>
-    <h2 />
-    <div />
+  <div
+    className="article"
+  >
+    <h2>
+      Article Two
+    </h2>
+    <div
+      className="date"
+    >
+      01/05/2018
+    </div>
     <div>
       <a
-        href={undefined}
+        className="website"
+        href="https://github.com/dfederspiel"
       >
+        David
          
+        Federspiel
       </a>
     </div>
-    <div />
+    <div
+      className="body"
+    >
+      This is an article about Two's
+    </div>
+  </div>
+  <div
+    className="article"
+  >
+    <h2>
+      Article Three
+    </h2>
+    <div
+      className="date"
+    >
+      02/06/2018
+    </div>
+    <div>
+      <a
+        className="website"
+        href="https://github.com/dfederspiel"
+      >
+        David
+         
+        Federspiel
+      </a>
+    </div>
+    <div
+      className="body"
+    >
+      This is an article about Three's
+    </div>
   </div>
 </div>
 `;
