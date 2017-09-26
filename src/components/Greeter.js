@@ -1,7 +1,7 @@
 // This is the preferred coding style (ES6 native)
 
 import React, {Component} from 'react';
-import Button from './Button';
+import Button from './Button/Button';
 //import Example from '../lib/Example';
 
 class Greeter extends Component {
