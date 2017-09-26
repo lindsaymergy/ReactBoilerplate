@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the avatar component given a user name should display the users avatar 1`] = `
+<button
+  className="button-styles"
+  onClick={[Function]}
+  type="button"
+>
+  My Test Button
+</button>
+`;
+
+exports[`the avatar component given a user name should display the users avatar 2`] = `
+<button
+  className="button-styles"
+  onClick={[Function]}
+  type="button"
+>
+  My Test Button
+</button>
+`;

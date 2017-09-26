@@ -19,8 +19,8 @@ class Avatar extends Component {
                     <img
                         src={this.getPhotoUrl()}
                         alt={this.state.alt}
-                        width={100}
-                        height={100}
+                        width={200}
+                        height={200}
                         className="commentPhoto widget" /><br />
                 </a>
             </div>
@@ -28,7 +28,7 @@ class Avatar extends Component {
     }
 
     getPhotoUrl() {
-        return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=100';
+        return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=200';
     }
 }
 

@@ -7,9 +7,18 @@ import NameTag from './components/NameTag';
 import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
 
+import DataApi from './services/DataApi';
 import { data } from './data.json';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        const api = new DataApi(data);
+        this.data = {
+            articles: api.getArticles(),
+            authors: api.getAuthors()
+        };
+    }
 
     render(){
         return (
@@ -25,7 +34,7 @@ class App extends Component {
                 </div>
                 <Greeter />
                 <div>
-                    <ArticleList data={data} />
+                    <ArticleList {...this.data} />
                 </div>
                 <Counter />
             </div>

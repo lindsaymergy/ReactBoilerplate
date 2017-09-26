@@ -1,15 +1,23 @@
 import React from 'react';
 import ArticleList from '../ArticleList';
+import DataApi from '../../../services/DataApi';
+
+import { data } from '../../../services/__tests__/data.json';
+
 import renderer from 'react-test-renderer';
-import { data } from './data.json';
 
 describe('The ArticleList', () => {
 
-    it('renders correctly', () => {
+    const api = new DataApi(data);
+    const props = {
+        articles: api.getArticles(),
+        authors: api.getAuthors()
+    };
 
+    it('renders correctly', () => {
         const tree = renderer.create(
             <ArticleList
-                data={data} // WHY DOESN'T the spread work!?  {...data}
+                {...props} // WHY DOESN'T the spread work!?  {...data}
             />
         ).toJSON();
 

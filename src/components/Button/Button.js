@@ -16,7 +16,7 @@ class Button extends Component {
 
     render() {
         return( 
-            <button onClick={this.handleClick} type="button">{this.props.text}</button>
+            <button onClick={this.handleClick} type="button" className="button-styles">{this.props.text}</button>
         );
     }
 }
