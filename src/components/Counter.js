@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import '../styles/counter.css';
 
 class Counter extends Component {
     constructor(props) {
         super(props);
-        this.state = { counter: 0 };
+        this.state = { counter: -30 };
     }
 
+    // https://facebook.github.io/react/docs/react-component.html#componentdidmount
     componentDidMount() {
         this.interval = setInterval(this.tick.bind(this), 1000);
     }
@@ -16,6 +18,7 @@ class Counter extends Component {
         });
     }
 
+    // https://facebook.github.io/react/docs/react-component.html#componentwillunmount
     componentWillUnmount() {
         clearInterval(this.interval);
     }

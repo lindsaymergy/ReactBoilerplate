@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import Button from './Button/Button';
-//import Example from '../lib/Example';
+import '../styles/greeter.css';
 
 class Greeter extends Component {
     constructor(){
@@ -11,22 +11,38 @@ class Greeter extends Component {
             currentNumber: 0
         };
         
-        // Example of injecting greeter into controller for handling things like
-        // state, and other methods
-        //this.example = new Example(this);
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(){
         const next = this.state.currentNumber + 1;
         this.setState({ currentNumber: next });
-        //this.example.doStuff();
+    }
+
+    getEmphaticPre(){
+        if(this.state.currentNumber < 5){
+            return 'Hello, ';
+        } else if (this.state.currentNumber < 10){
+            return 'Hey, ';
+        } else {
+            return 'Dammit!, ';
+        }
+    }
+
+    getEmphaticPost(){
+        if(this.state.currentNumber < 5){
+            return '.';
+        } else if (this.state.currentNumber < 10){
+            return '!';
+        } else {
+            return '!!!!!';
+        }
     }
 
     render(){
         return(
-            <div>
-                <div>Dammit, I&#39;ve said hello {this.state.currentNumber} times!!</div>
+            <div className="greeter">
+                <div>{this.getEmphaticPre()}I&#39;ve said hello {this.state.currentNumber} times{this.getEmphaticPost()}</div>
                 <Button click={this.handleClick} text="Say Hello" />
             </div>
         );

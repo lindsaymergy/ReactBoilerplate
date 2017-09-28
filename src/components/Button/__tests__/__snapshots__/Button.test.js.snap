@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the avatar component given a user name should display the users avatar 1`] = `
+exports[`the button component given a text value should display a button with the given value 1`] = `
 <button
-  className="button-styles"
+  className="button"
   onClick={[Function]}
   type="button"
 >
@@ -10,9 +10,9 @@ exports[`the avatar component given a user name should display the users avatar 
 </button>
 `;
 
-exports[`the avatar component given a user name should display the users avatar 2`] = `
+exports[`the button component given a text value should display a button with the given value 2`] = `
 <button
-  className="button-styles"
+  className="button"
   onClick={[Function]}
   type="button"
 >

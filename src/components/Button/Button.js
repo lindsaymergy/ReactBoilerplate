@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './styles/button.css';
 
 class Button extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ class Button extends Component {
 
     render() {
         return( 
-            <button onClick={this.handleClick} type="button" className="button-styles">{this.props.text}</button>
+            <button className="button" onClick={this.handleClick} type="button">{this.props.text}</button>
         );
     }
 }

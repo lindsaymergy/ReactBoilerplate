@@ -3,9 +3,9 @@ import React from 'react';
 import Button from '../Button';
 import renderer from 'react-test-renderer';
 
-describe('the avatar component', () => {
-    describe('given a user name', () => {
-        it('should display the users avatar', () => {
+describe('the button component', () => {
+    describe('given a text value', () => {
+        it('should display a button with the given value', () => {
 
             let props = {
                 text: 'My Test Button',

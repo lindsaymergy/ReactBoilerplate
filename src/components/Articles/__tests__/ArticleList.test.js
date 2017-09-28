@@ -7,7 +7,6 @@ import { data } from '../../../services/__tests__/data.json';
 import renderer from 'react-test-renderer';
 
 describe('The ArticleList', () => {
-
     const api = new DataApi(data);
     const props = {
         articles: api.getArticles(),
@@ -15,13 +14,14 @@ describe('The ArticleList', () => {
     };
 
     it('renders correctly', () => {
+
+        global.fetch = jest.fn(() => new Promise((resolve) => resolve({})));
+
         const tree = renderer.create(
             <ArticleList
-                {...props} // WHY DOESN'T the spread work!?  {...data}
+                {...props}
             />
         ).toJSON();
-
-        expect(tree.children.length).toBe(3);
         expect(tree).toMatchSnapshot();
     });
 });

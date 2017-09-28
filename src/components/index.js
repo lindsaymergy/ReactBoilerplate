@@ -7,4 +7,5 @@ module.exports = {
     Counter: require('./Counter').default,
     Articles: require('./Articles/Article').default,
     Avatar: require('./Avatar/Avatar').default,
+    Button: require('./Button/Button').default
 };
