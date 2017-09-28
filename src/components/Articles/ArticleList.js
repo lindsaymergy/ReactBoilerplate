@@ -11,32 +11,10 @@ class ArticleList extends Component {
             articles: props.articles,
             authors: props.authors
         };
-
-        this.refreshArticles = this.refreshArticles.bind(this);
     }
     
     articleActions = {
         lookupAuthor: (authorId) => this.state.authors[authorId],
-    }
-
-    refreshArticles(){
-        let updatedData = {};
-        fetch('http://localhost:3000/authors')
-            .then((response) => response.json()
-                .then((data) => 
-                { 
-                    updatedData.authors = data;
-                    //this.setState({ authors: data });
-                    return fetch('http://localhost:3000/articles');
-                })
-                .then((response) => response.json()
-                    .then((data) => 
-                    {   
-                        updatedData.articles = data; 
-                        this.setState({ articles: updatedData.articles, authors: updatedData.authors });
-                    })
-                )
-            );
     }
 
     render(){
@@ -51,7 +29,6 @@ class ArticleList extends Component {
                         />
                     )}
                 </div>
-                <button onClick={this.refreshArticles} type="button">Update</button>
             </div>
         );
     } 

@@ -7,19 +7,17 @@ import Counter from './components/Counter';
 import NameTag from './components/NameTag';
 import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
-
-import DataApi from './services/DataApi';
-import { data } from './services/__tests__/data.json';
+import { articles, authors } from './data/db.json';
 
 class App extends Component {
 
     // https://facebook.github.io/react/docs/react-component.html#constructor
     constructor(props){
         super(props);
-        const api = new DataApi(data);
         this.data = {
-            articles: api.getArticles(),
-            authors: api.getAuthors()
+            articles: articles,
+            authors: authors,
+            serviceUrl: 'http://localhost:3000/'
         };
     }
 
@@ -39,9 +37,10 @@ class App extends Component {
                     <Avatar user="github" />
                     <Avatar user="dfederspiel" />
                     <Avatar user="jonfazzaro" />
+                    <Avatar user="matthewtruty" />
                 </div>
                 <div className="nametags">
-                    <NameTag myClasses="yellow" name="Rick James" />
+                    <NameTag myClasses="big yellow" name="Rick James" />
                     <NameTag myClasses="big orange" name="David Federspiel" />
                 </div>
                 <div className="greeters" >

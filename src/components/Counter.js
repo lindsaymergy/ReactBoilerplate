@@ -4,7 +4,7 @@ import '../styles/counter.css';
 class Counter extends Component {
     constructor(props) {
         super(props);
-        this.state = { counter: -30 };
+        this.state = { counter: 0 };
     }
 
     // https://facebook.github.io/react/docs/react-component.html#componentdidmount
@@ -25,7 +25,7 @@ class Counter extends Component {
 
     render() {
         return (
-            <h2>Counter: {this.state.counter}</h2>
+            <h2>{this.state.counter} seconds since the last refresh</h2>
         );
     }
 }
