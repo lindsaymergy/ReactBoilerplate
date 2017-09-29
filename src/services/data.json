@@ -1,0 +1,47 @@
+{
+    "data": {
+        "articles": [
+            {
+                "id": "1",
+                "title": "Article One",
+                "date": "01/01/2018",
+                "authorId": "2",
+                "body": "This is an article about Ones's, what?"
+            },
+            {
+                "id": "2",
+                "title": "Article Two",
+                "date": "01/05/2018",
+                "authorId": "3",
+                "body": "This is an article about Two's"
+            },
+            {
+                "id": "3",
+                "title": "Article Three",
+                "date": "02/06/2018",
+                "authorId": "1",
+                "body": "This is an article about Three's"
+            }
+        ],
+        "authors": [
+            {
+                "id": "1",
+                "firstName": "David",
+                "lastName": "Federspiel",
+                "website": "https://github.com/dfederspiel" 
+            },
+            {
+                "id": "2",
+                "firstName": "Git",
+                "lastName": "Hub",
+                "website": "https://github.com/github" 
+            },
+            {
+                "id": "3",
+                "firstName": "Matt",
+                "lastName": "Truty",
+                "website": "https://github.com/matthewtruty" 
+            }
+        ]
+    }
+}

@@ -7,35 +7,35 @@ import Counter from './components/Counter';
 import NameTag from './components/NameTag';
 import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
-import { articles, authors } from './data/db.json';
+
+import DataApi from './services/DataApi';
+import { data } from './services/data.json';
 
 class App extends Component {
 
     // https://facebook.github.io/react/docs/react-component.html#constructor
     constructor(props){
         super(props);
+        const api = new DataApi(data);
         this.data = {
-            articles: articles,
-            authors: authors,
+            articles: api.getArticles(),
+            authors: api.getAuthors(),
             serviceUrl: 'http://localhost:3000/'
         };
-    }
-
-    // https://facebook.github.io/react/docs/react-component.html#componentdidmount
-    componentDidMount(){
-        fetch('http://localhost:3000/authors')
-            .then((response) => response.json().then((data) => this.setState({ authors: data })));
-        fetch('http://localhost:3000/articles')
-            .then((response) => response.json().then((data) => this.setState({ articles: data })));
     }
 
     // https://facebook.github.io/react/docs/react-component.html#render
     render(){
         return (
             <div className='app'>
+                <div className="counters" style={{textAlign: 'center', textTransform: 'uppercase'}}>
+                    <Counter />
+                </div>
                 <div className="avatars">
-                    <Avatar user="github" />
+                    <Avatar user="jhaagen" />
                     <Avatar user="dfederspiel" />
+                    <Avatar user="andyglassley" />
+                    <Avatar user="robertmccoy" />
                     <Avatar user="jonfazzaro" />
                     <Avatar user="matthewtruty" />
                 </div>
@@ -49,9 +49,7 @@ class App extends Component {
                 <div className="articles">
                     <ArticleList {...this.data} />
                 </div>
-                <div className="counters">
-                    <Counter />
-                </div>
+                
             </div>
         );
     }

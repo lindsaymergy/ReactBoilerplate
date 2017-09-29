@@ -14,7 +14,7 @@ class Avatar extends Component {
     render() {
         return (
             <div className="avatar">
-                <span>{this.state.user}</span>
+                <span className="user-name">{this.props.user}</span>
                 <a href={'https://github.com/' + this.state.user}>
                     <img
                         src={this.getPhotoUrl()}
@@ -28,7 +28,7 @@ class Avatar extends Component {
     }
 
     getPhotoUrl() {
-        return 'https://avatars.githubusercontent.com/' + this.state.user + '?s=200';
+        return 'https://avatars.githubusercontent.com/' + this.props.user + '?s=200';
     }
 }
 
