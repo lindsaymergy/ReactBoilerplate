@@ -22,7 +22,7 @@
       "<rootDir>/node_modules/"
     ]
   },
-  "author": "",
+  "author": "David Federspiel",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,21 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the button component given a text value should display a button with the given value 1`] = `
-<button
-  className="button"
-  onClick={[Function]}
-  type="button"
->
-  My Test Button
-</button>
-`;
-
-exports[`the button component given a text value should display a button with the given value 2`] = `
-<button
-  className="button"
-  onClick={[Function]}
-  type="button"
->
-  My Test Button
-</button>
+exports[`the button component renders correctly 1`] = `
+<div>
+  <button
+    className="button"
+    onClick={[Function]}
+    type="button"
+  >
+    My Test Button
+  </button>
+</div>
 `;
