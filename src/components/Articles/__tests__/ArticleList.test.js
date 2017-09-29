@@ -37,7 +37,6 @@ describe('The ArticleList', () => {
                 {...props}
             />
         ).toJSON();
-
         expect(tree).toMatchSnapshot();
     });
 });
