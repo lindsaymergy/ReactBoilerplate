@@ -19,12 +19,18 @@ module.exports = merge(baseConfig, {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                use: [
-                    { loader: 'style-loader' },
-                    { loader: 'css-loader' }
-                ],
-                exclude: /node_modules/
+                test: /\.scss$/,
+                use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader', options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: 'sass-loader', options: {
+                        sourceMap: true
+                    }
+                }]
             }
         ]
     },

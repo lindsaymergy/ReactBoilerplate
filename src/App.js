@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 
-import './styles/App.css';
+//import './styles/app.css';
+import './styles/app.scss';
 
-import Greeter from './components/Greeter';
 import Counter from './components/Counter';
 import NameTag from './components/NameTag';
 import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
+import Greeter from './components/Greeter';
 
 import DataApi from './services/DataApi';
 import { data } from './services/data.json';
@@ -49,7 +50,6 @@ class App extends Component {
                 <div className="articles">
                     <ArticleList {...this.data} />
                 </div>
-                
             </div>
         );
     }

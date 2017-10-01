@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/nametag.scss';
+import '../progress.css';
 
 class NameTag extends Component {
 

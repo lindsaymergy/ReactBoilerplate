@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import Button from './Button/Button';
-import '../styles/greeter.css';
+import '../styles/greeter.scss';
 
 class Greeter extends Component {
     constructor(){
