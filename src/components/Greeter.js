@@ -25,7 +25,7 @@ class Greeter extends Component {
         } else if (this.state.currentNumber < 10){
             return 'Hey, ';
         } else {
-            return 'Dammit!, ';
+            return 'Dang it!, ';
         }
     }
 

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The ArticleList renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "margin": "20px",
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    className="articles"
+  />
+</div>
+`;
