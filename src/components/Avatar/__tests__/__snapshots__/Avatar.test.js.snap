@@ -4,7 +4,9 @@ exports[`the avatar component given a user name should display the users avatar 
 <div
   className="avatar"
 >
-  <span>
+  <span
+    className="user-name"
+  >
     dfederspiel
   </span>
   <a
@@ -26,7 +28,9 @@ exports[`the avatar component renders correctly 1`] = `
 <div
   className="avatar"
 >
-  <span>
+  <span
+    className="user-name"
+  >
     dfederspiel
   </span>
   <a
