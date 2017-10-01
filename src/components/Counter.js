@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
+import '../styles/counter.css';
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { counter: 0 };
-  }
+    constructor(props) {
+        super(props);
+        this.state = { counter: 0 };
+    }
 
-  componentDidMount() {
-    this.interval = setInterval(this.tick.bind(this), 10);
-  }
+    // https://facebook.github.io/react/docs/react-component.html#componentdidmount
+    componentDidMount() {
+        this.interval = setInterval(this.tick.bind(this), 1000);
+    }
 
-  tick() {
-    this.setState({
-      counter: this.state.counter + 1
-    });
-  }
+    tick() {
+        this.setState({
+            counter: this.state.counter + 1
+        });
+    }
 
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
+    // https://facebook.github.io/react/docs/react-component.html#componentwillunmount
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
 
-  render() {
-    return (
-      <h2>Counter: {this.state.counter}</h2>
-   );
-  }
+    render() {
+        return (
+            <h2>{this.state.counter} seconds since the last refresh</h2>
+        );
+    }
 }
 
 export default Counter;

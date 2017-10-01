@@ -1,4 +1,5 @@
 .avatar {
+    margin: 22px;
 }
 
 .avatar span {
@@ -9,11 +10,15 @@
 }
 
 .avatar img {
+    box-sizing: border-box;
     border-radius: 10px;
+    border: solid 0px green;
     transition: all .1s ease-in;
 }
 
 .avatar:hover img {
-    border-radius: 40px;
+    transition: all .1s ease-out;
+    border: solid 5px green;
+    border-radius: 100px;
     box-shadow: 0px 5px 10px rgba(0,0,0,.5);
 }

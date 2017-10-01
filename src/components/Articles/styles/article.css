@@ -1,0 +1,24 @@
+
+.article {
+    margin: 12px;
+    padding: 30px;
+    border: solid 2px black;
+    background-color: #F2E394;
+    border-radius: 10px;
+}
+
+.article div.h2 {
+    font-family: sans-serif;
+    margin-bottom: 4px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.article .date {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.article .body {
+    padding: 20px 0;
+}

@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
+import './styles/button.css';
 
 class Button extends Component {
     constructor(props) {
         super(props);
         this.state = {
             text: props.text
-        }
+        };
         this.onHandleClick = props.click;
         this.handleClick = this.handleClick.bind(this);
     }
@@ -15,8 +16,13 @@ class Button extends Component {
     }
 
     render() {
-        return( 
-            <button onClick={this.handleClick} type="button">{this.state.text}</button>
+        return(
+            <div>
+                <button
+                    className="button" 
+                    onClick={this.handleClick} 
+                    type="button">{this.props.text}</button>
+            </div>
         );
     }
 }

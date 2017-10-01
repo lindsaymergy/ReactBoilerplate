@@ -1,0 +1,19 @@
+body {
+    background-color: #588C7E;
+}
+
+.app {
+    padding: 40px;
+}
+
+.avatars, .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nametags {
+    text-align: center;
+    margin: 20px;
+    padding: 40px;
+}
