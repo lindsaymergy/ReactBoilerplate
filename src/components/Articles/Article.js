@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/article.css';
+import './styles/article.scss';
 
 const Article = (props) => {
     const { article, actions } = props;

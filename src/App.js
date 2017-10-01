@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
-import './styles/App.css';
+//import './styles/app.css';
+import './styles/app.scss';
 
 import Counter from './components/Counter';
 import NameTag from './components/NameTag';
@@ -49,7 +50,6 @@ class App extends Component {
                 <div className="articles">
                     <ArticleList {...this.data} />
                 </div>
-                
             </div>
         );
     }
