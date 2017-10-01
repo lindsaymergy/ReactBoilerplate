@@ -21,7 +21,7 @@ describe('the button component', () => {
             const button = ReactTestUtils.renderIntoDocument(
                 <Button {...props} />
             );
-            
+
             let text = ReactTestUtils.findRenderedDOMComponentWithClass(button, 'button');
             expect(text.textContent).toEqual(props.text);
         });
