@@ -5,8 +5,6 @@ import values from 'object.values';
 
 
 class ArticleList extends Component {
-
-    myFunc = function(param1) { return param1; };
     
     constructor(props) {
         super(props);

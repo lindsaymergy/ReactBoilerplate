@@ -4,15 +4,19 @@ import './styles/button.scss';
 class Button extends Component {
     constructor(props) {
         super(props);
+
+        this.defaultText = 'Yo! You forgot to add text!';
+
         this.state = {
-            text: props.text
+            text: props.text === undefined ? this.defaultText : props.text
         };
         this.onHandleClick = props.click;
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(){
-        this.onHandleClick();
+        if(this.onHandleClick !== undefined)
+            this.onHandleClick();
     }
 
     render() {
@@ -21,7 +25,7 @@ class Button extends Component {
                 <button
                     className="button" 
                     onClick={this.handleClick} 
-                    type="button">{this.props.text}</button>
+                    type="button">{this.props.text === undefined ? this.defaultText : this.props.text}</button>
             </div>
         );
     }
