@@ -11,6 +11,10 @@ exports[`The ArticleList renders correctly 1`] = `
 >
   <div
     className="articles"
-  />
+  >
+    <div />
+    <div />
+    <div />
+  </div>
 </div>
 `;
