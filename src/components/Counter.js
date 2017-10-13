@@ -14,7 +14,7 @@ class Counter extends Component {
 
     tick() {
         this.setState({
-            counter: this.state.counter + 10
+            counter: this.state.counter + 1
         });
     }
 

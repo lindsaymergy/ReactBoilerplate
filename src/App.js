@@ -8,6 +8,8 @@ import NameTag from './components/NameTag';
 import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
 import Greeter from './components/Greeter';
+import Button from './components/Button/Button';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 import DataApi from './services/DataApi';
 import { data } from './services/data.json';
@@ -29,8 +31,19 @@ class App extends Component {
     render(){
         return (
             <div className='app'>
+                <div>
+                    <ProgressBar maxValue={100} value={45} color="blue" />
+                    <ProgressBar maxValue={1000} value={654} color="cyan" />
+                    <ProgressBar maxValue={10000} value={3532} color="magenta"/>
+                </div>
                 <div className="counters" style={{textAlign: 'center', textTransform: 'uppercase'}}>
                     <Counter />
+                </div>
+                <ProgressBar maxValue={10000} value={3532} color="yellow" />
+                <ProgressBar maxValue={1} value={1}  color="orange" />
+                <ProgressBar maxValue={1000} value={300} color="#cc0" />
+                <div>
+                    <Button text="Hello, I am a button!" />
                 </div>
                 <div className="avatars">
                     <Avatar user="jhaagen" />

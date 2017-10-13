@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Article renders correctly 1`] = `
+<div
+  className="article"
+>
+  <div
+    className="h2"
+  >
+    The Littlest Worm
+  </div>
+  <div
+    className="date"
+  />
+  <div>
+    <a
+      className="website"
+      href="http://www.author.com"
+    >
+      David
+       
+      Federspiel
+       GitHub Account
+    </a>
+  </div>
+  <div
+    className="body"
+  >
+    The littlest worm you ever saw got stuck inside my soda straw.
+  </div>
+</div>
+`;

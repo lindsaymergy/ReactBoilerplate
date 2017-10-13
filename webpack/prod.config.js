@@ -18,7 +18,7 @@ module.exports = merge(baseConfig, {
     module: {
         loaders: [
             {
-                test: /\.css$/,
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [

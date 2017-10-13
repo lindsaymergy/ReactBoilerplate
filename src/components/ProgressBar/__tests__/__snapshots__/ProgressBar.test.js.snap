@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the progress bar component renders correctly 1`] = `
+<div
+  className="progress-bar-wrapper"
+>
+  <label>
+    Progress ® Bar
+  </label>
+  <div
+    className="progress-bar"
+  >
+    <div
+      className="progress-bar-progress"
+      style={
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": "15px 0 0 15px",
+          "width": "0%",
+        }
+      }
+    >
+      <div
+        className="percentage"
+      >
+        0
+      </div>
+    </div>
+  </div>
+</div>
+`;
