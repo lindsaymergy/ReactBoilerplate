@@ -14,16 +14,4 @@ describe('the progress bar component', () => {
         ).toJSON();
         expect(tree).toMatchSnapshot();
     });
-
-    // describe('given a max value and current value', () => {
-    //     xit('shows a progress bar of the correct width', () => {
-    //         const progressBar = ReactTestUtils.renderIntoDocument(
-    //             <ProgressBar maxValue="400" currentValue="60" />
-    //         );
-
-    //         let progressBarProgress = ReactTestUtils.findRenderedDOMComponentWithClass(progressBar, 'percentage');
-            
-    //         expect(progressBarProgress.textContent).toEqual('0');
-    //     });
-    // });
 });

@@ -40,7 +40,7 @@ class App extends Component {
                     <Counter />
                 </div>
                 <ProgressBar maxValue={10000} value={3532} color="yellow" />
-                <ProgressBar maxValue={1} value={.75}  color="orange" />
+                <ProgressBar maxValue={1} value={1}  color="orange" />
                 <ProgressBar maxValue={1000} value={300} color="#cc0" />
                 <div>
                     <Button text="Hello, I am a button!" />

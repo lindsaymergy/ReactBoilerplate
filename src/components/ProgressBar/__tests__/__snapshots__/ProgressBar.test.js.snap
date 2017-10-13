@@ -15,6 +15,7 @@ exports[`the progress bar component renders correctly 1`] = `
       style={
         Object {
           "backgroundColor": "red",
+          "borderRadius": "15px 0 0 15px",
           "width": "0%",
         }
       }

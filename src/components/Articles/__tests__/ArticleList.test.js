@@ -36,6 +36,14 @@ describe('The ArticleList', () => {
                     'authorId': '1',
                     'body': 'This is an article about Three\'s'
                 }
+            ],
+            authors: [
+                {
+                    id: 1,
+                    website: 'http://www.author.com',
+                    firstName: 'David',
+                    lastName: 'Federspiel'
+                }
             ]
         };
     });
@@ -48,4 +56,11 @@ describe('The ArticleList', () => {
         ).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    // describe('given an article', () => {
+    //     it('can lookup the correct author', () => {
+    //         var articleList = new ArticleList(...props);
+    //         articleList.articleActions.lookupAuthor(1);
+    //     });
+    // });
 });

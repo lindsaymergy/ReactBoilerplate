@@ -24,8 +24,12 @@ class ProgressBar extends Component {
             clearInterval(this.interval);
 
         this.setState({
-            currentPercentage: newPercentage
+            currentPercentage: newPercentage > 1 ? 1 : newPercentage
         });
+    }
+
+    getRadius() {
+        return '15px ' + ((this.state.currentPercentage >= 1) ? '15px 15px' : '0 0') + ' 15px';
     }
 
     componentDidMount() {
@@ -41,7 +45,7 @@ class ProgressBar extends Component {
             <div className="progress-bar-wrapper">
                 <label>Progress &reg; Bar</label>
                 <div className="progress-bar">
-                    <div className="progress-bar-progress" style={{ backgroundColor: this.props.color, width: this.state.currentPercentage * 100 + '%' }}>
+                    <div className="progress-bar-progress" style={{ backgroundColor: this.props.color, width: this.state.currentPercentage * 100 + '%', borderRadius: this.getRadius() }}>
                         <div className="percentage">{Math.round(this.state.currentPercentage * 100)}</div>
                     </div>
                 </div>
