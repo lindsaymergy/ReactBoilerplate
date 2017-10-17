@@ -1,8 +1,8 @@
 // This is the preferred coding style (ES6 native)
 
 import React, {Component} from 'react';
-import Button from './Button/Button';
-import '../styles/greeter.scss';
+import Button from '../Button/Button';
+import './greeter.scss';
 
 class Greeter extends Component {
     constructor(){

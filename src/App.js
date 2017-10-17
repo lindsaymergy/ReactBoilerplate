@@ -3,11 +3,11 @@ import React, {Component} from 'react';
 //import './styles/app.css';
 import './styles/app.scss';
 
-import Counter from './components/Counter';
-import NameTag from './components/NameTag';
+import Counter from './components/Counter/Counter';
+import NameTag from './components/NameTag/NameTag';
 import Avatar from './components/Avatar/Avatar';
 import ArticleList from './components/Articles/ArticleList';
-import Greeter from './components/Greeter';
+import Greeter from './components/Greeter/Greeter';
 import Button from './components/Button/Button';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 
@@ -32,6 +32,16 @@ class App extends Component {
         return (
             <div className='app'>
                 <div>
+                    <Counter />
+                    <Counter />
+                    <Counter />
+                    <Counter />
+                    <Counter />
+                    <Counter />
+                    <Counter />
+                    <Counter />
+                </div>
+                <div>
                     <ProgressBar maxValue={100} value={45} color="blue" />
                     <ProgressBar maxValue={1000} value={654} color="cyan" />
                     <ProgressBar maxValue={10000} value={3532} color="magenta"/>
@@ -39,9 +49,11 @@ class App extends Component {
                 <div className="counters" style={{textAlign: 'center', textTransform: 'uppercase'}}>
                     <Counter />
                 </div>
-                <ProgressBar maxValue={10000} value={3532} color="yellow" />
-                <ProgressBar maxValue={1} value={1}  color="orange" />
-                <ProgressBar maxValue={1000} value={300} color="#cc0" />
+                <div>
+                    <ProgressBar maxValue={10000} value={3532} color="yellow" />
+                    <ProgressBar maxValue={1} value={1}  color="orange" />
+                    <ProgressBar maxValue={1000} value={300} color="#cc0" />
+                </div>
                 <div>
                     <Button text="Hello, I am a button!" />
                 </div>

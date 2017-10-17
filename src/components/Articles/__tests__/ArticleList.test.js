@@ -1,12 +1,13 @@
 import React from 'react';
 import ArticleList from '../ArticleList';
 
+import renderer from 'react-test-renderer';
+import ReactTestUtils from 'react-dom/test-utils';
+
 jest.mock('../Article', () => {
     const article = () => <div />;
     return article;
 });
-
-import renderer from 'react-test-renderer';
 
 describe('The ArticleList', () => {
 
@@ -57,10 +58,11 @@ describe('The ArticleList', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    // describe('given an article', () => {
-    //     it('can lookup the correct author', () => {
-    //         var articleList = new ArticleList(...props);
-    //         articleList.articleActions.lookupAuthor(1);
-    //     });
+    // it('can lookup authors', () => {
+    //     var ArticleListComponent = ReactTestUtils.renderIntoDocument(<ArticleList {...props} />);
+    //     ArticleListComponent.articleActions.lookupAuthor(1);
+    //     expect(ArticleListComponent.articleActions.lookupAuthor).toHaveBeenCalled();
+
+
     // });
 });
