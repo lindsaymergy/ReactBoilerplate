@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import ReactTestUtils from 'react-dom/test-utils';
 
 jest.mock('../Article', () => {
-    const article = () => <div />;
+    const article = (props) => <div data-props={props} />;
     return article;
 });
 
@@ -16,27 +16,7 @@ describe('The ArticleList', () => {
     beforeEach(() => {
         props = {
             articles: [
-                {
-                    'id': '1',
-                    'title': 'Article One',
-                    'date': '01/01/2018',
-                    'authorId': '1',
-                    'body': 'This is an article about Ones\'s'
-                },
-                {
-                    'id': '2',
-                    'title': 'Article Two',
-                    'date': '01/05/2018',
-                    'authorId': '1',
-                    'body': 'This is an article about Two\'s'
-                },
-                {
-                    'id': '3',
-                    'title': 'Article Three',
-                    'date': '02/06/2018',
-                    'authorId': '1',
-                    'body': 'This is an article about Three\'s'
-                }
+                { id: 1 },{ id: 2 },{ id: 3 }
             ],
             authors: [
                 {
@@ -57,12 +37,4 @@ describe('The ArticleList', () => {
         ).toJSON();
         expect(tree).toMatchSnapshot();
     });
-
-    // it('can lookup authors', () => {
-    //     var ArticleListComponent = ReactTestUtils.renderIntoDocument(<ArticleList {...props} />);
-    //     ArticleListComponent.articleActions.lookupAuthor(1);
-    //     expect(ArticleListComponent.articleActions.lookupAuthor).toHaveBeenCalled();
-
-
-    // });
 });

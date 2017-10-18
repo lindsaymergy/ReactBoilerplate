@@ -2,8 +2,7 @@ import React from 'react';
 import './styles/article.scss';
 
 const Article = (props) => {
-    const { article, actions } = props;
-    const author = actions.lookupAuthor(article.authorId);
+    const { article, author } = props;
     return (
         <div className="article">
             <div className="h2">{article.title}</div>

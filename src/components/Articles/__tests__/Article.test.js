@@ -10,14 +10,11 @@ describe('The Article', () => {
             data: '1/1/2011',
             body: 'The littlest worm you ever saw got stuck inside my soda straw.'
         },
-        actions: {
-            lookupAuthor: () => { 
-                return {
-                    website: 'http://www.author.com',
-                    firstName: 'David',
-                    lastName: 'Federspiel'
-                };
-            }
+        author: {
+            'id': '1',
+            'firstName': 'David',
+            'lastName': 'Federspiel',
+            'website': 'https://github.com/dfederspiel' 
         }
     };
 

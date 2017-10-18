@@ -14,8 +14,8 @@ class ArticleList extends Component {
         };
     }
     
-    articleActions = {
-        lookupAuthor: (authorId) => this.state.authors[authorId],
+    lookupAuthor(authorId) {
+        return this.state.authors[authorId];
     }
 
     render(){
@@ -26,7 +26,7 @@ class ArticleList extends Component {
                         <Article
                             key={article.id}
                             article={article}
-                            actions={this.articleActions}
+                            author={this.lookupAuthor(article.authorId)}
                         />
                     )}
                 </div>

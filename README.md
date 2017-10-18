@@ -21,7 +21,7 @@ npm install
 
 *npm run analyze* - opens a page with bundle analysis, showing everying in the production bundle as squares relative to size.
 
-*npm run json* - starts a json server that can be used for quickly scaffolding data types and mocing services for components.
+*npm run json* - starts a json server that can be used for quickly scaffolding data types and mocking services for components.
 
 ## Codebase
 This boilerplate comes with a number of tools you can use to quickly author react components.  There are a number of components already here to get you started.
