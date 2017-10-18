@@ -21,15 +21,8 @@ describe('the progress bar component', () => {
         var radius = ProgressBarComponent.getRadius();
         expect(radius).toBe('15px 0 0 15px');
 
-        //ProgressBarComponent.state.currentPercentage = 1;
-        //radius = ProgressBarComponent.getRadius();
-
-        //expect(radius).toBe('15px 15px 15px 15px');
-
         jest.useFakeTimers();
         jest.runOnlyPendingTimers();
-
-        console.log(ProgressBarComponent.getRadius());
 
     });
 });

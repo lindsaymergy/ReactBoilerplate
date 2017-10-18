@@ -15,7 +15,7 @@ exports[`The Article renders correctly 1`] = `
   <div>
     <a
       className="website"
-      href="http://www.author.com"
+      href="https://github.com/dfederspiel"
     >
       David
        

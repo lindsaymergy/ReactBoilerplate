@@ -12,9 +12,36 @@ exports[`The ArticleList renders correctly 1`] = `
   <div
     className="articles"
   >
-    <div />
-    <div />
-    <div />
+    <div
+      data-props={
+        Object {
+          "article": Object {
+            "id": 1,
+          },
+          "author": undefined,
+        }
+      }
+    />
+    <div
+      data-props={
+        Object {
+          "article": Object {
+            "id": 2,
+          },
+          "author": undefined,
+        }
+      }
+    />
+    <div
+      data-props={
+        Object {
+          "article": Object {
+            "id": 3,
+          },
+          "author": undefined,
+        }
+      }
+    />
   </div>
 </div>
 `;
