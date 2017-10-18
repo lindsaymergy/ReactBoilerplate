@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../styles/nametag.scss';
+import './nametag.scss';
 
 class NameTag extends Component {
 
@@ -12,7 +12,7 @@ class NameTag extends Component {
 
     render() {
         return (
-            <div className={this.props.myClasses}>Im {this.state.name}, dude!</div>
+            <div className={this.props.myClasses}>Im {this.state.name}, bitch!</div>
         );
     }
 }

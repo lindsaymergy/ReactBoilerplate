@@ -14,4 +14,22 @@ describe('the progress bar component', () => {
         ).toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    it('will increase the width of the progress for each tick', () => {
+        var ProgressBarComponent = ReactTestUtils.renderIntoDocument(<ProgressBar maxValue={100} value={100} />);
+        ProgressBarComponent.tick();
+        var radius = ProgressBarComponent.getRadius();
+        expect(radius).toBe('15px 0 0 15px');
+
+        //ProgressBarComponent.state.currentPercentage = 1;
+        //radius = ProgressBarComponent.getRadius();
+
+        //expect(radius).toBe('15px 15px 15px 15px');
+
+        jest.useFakeTimers();
+        jest.runOnlyPendingTimers();
+
+        console.log(ProgressBarComponent.getRadius());
+
+    });
 });

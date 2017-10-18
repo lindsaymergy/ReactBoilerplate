@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the nametag component renders correctly 1`] = `
+<div
+  className={undefined}
+>
+  Im 
+  David
+  , bitch!
+</div>
+`;

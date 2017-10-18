@@ -14,30 +14,23 @@ class ProgressBar extends Component {
         };
         this.stepper = .001;
         this.targetPercentage = (this.props.value / this.props.maxValue);
+        setTimeout(this.tick.bind(this), 10);
     }
 
     tick() {
         this.stepper += .001;
         let newPercentage = this.state.currentPercentage + this.stepper;
 
-        if(newPercentage >= this.targetPercentage)
-            clearInterval(this.interval);
-
         this.setState({
             currentPercentage: newPercentage > 1 ? 1 : newPercentage
         });
+
+        if(newPercentage < this.targetPercentage)
+            setTimeout(this.tick.bind(this), 10);
     }
 
     getRadius() {
         return '15px ' + ((this.state.currentPercentage >= 1) ? '15px 15px' : '0 0') + ' 15px';
-    }
-
-    componentDidMount() {
-        this.interval = setInterval(this.tick.bind(this), 10);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
     }
 
     render() {

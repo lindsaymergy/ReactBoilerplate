@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the progress bar component renders correctly 1`] = `
+<div
+  className="greeter"
+>
+  <div>
+    Hello, 
+    I've said hello 
+    0
+     times
+    .
+  </div>
+  <div>
+    <button
+      className="button"
+      onClick={[Function]}
+      type="button"
+    >
+      Say Hello
+    </button>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../styles/counter.scss';
+import './counter.scss';
 
 class Counter extends Component {
     constructor(props) {
@@ -9,18 +9,14 @@ class Counter extends Component {
 
     // https://facebook.github.io/react/docs/react-component.html#componentdidmount
     componentDidMount() {
-        this.interval = setInterval(this.tick.bind(this), 1000);
+        setTimeout(this.tick.bind(this), 1000);
     }
 
     tick() {
         this.setState({
             counter: this.state.counter + 1
         });
-    }
-
-    // https://facebook.github.io/react/docs/react-component.html#componentwillunmount
-    componentWillUnmount() {
-        clearInterval(this.interval);
+        setTimeout(this.tick.bind(this), 1000);
     }
 
     render() {
