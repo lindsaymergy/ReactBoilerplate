@@ -9,26 +9,10 @@ class ProgressBar extends Component {
             name: props.name,
             maxValue: props.maxValue,
             value: props.value,
-            //currentPercentage: 0,
-            //newPercentage: 0,
             color: props.color
         };
-        //this.stepper = .05;
         this.targetPercentage = (this.props.value / this.props.maxValue);
-        //setTimeout(this.tick.bind(this), 10);
     }
-
-    // tick() {
-    //     this.stepper += .05;
-    //     this.setState({ newPercentage: this.state.currentPercentage + this.stepper });
-
-    //     this.setState({
-    //         currentPercentage: this.state.newPercentage >= 1 ? 1 : this.state.newPercentage
-    //     });
-
-    //     if(this.state.newPercentage < this.targetPercentage)
-    //         setTimeout(this.tick.bind(this), 10);
-    // }
 
     getRadius() {
         return '15px ' + ((this.targetPercentage * 100 >= 100) ? '15px 15px' : '0 0') + ' 15px';

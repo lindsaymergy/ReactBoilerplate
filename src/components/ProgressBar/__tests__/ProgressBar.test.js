@@ -15,17 +15,6 @@ describe('the progress bar component', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    // it('will change the width of the control with each tick', () => {
-    //     var ProgressBarComponent = ReactTestUtils.renderIntoDocument(<ProgressBar maxValue={100} value={10} />);
-    //     ProgressBarComponent.tick();
-    //     ProgressBarComponent.state.newPercentage = 1;
-    //     ProgressBarComponent.tick();
-    //     ProgressBarComponent.state.newPercentage = -1;
-    //     ProgressBarComponent.tick();
-    //     ProgressBarComponent.state.newPercentage = 10;
-    //     ProgressBarComponent.tick();
-    // });
-
     it('will set a radius of 15px for just the TL & BL of the bar if current percentage is less than 1', () => {
         var ProgressBarComponent = ReactTestUtils.renderIntoDocument(<ProgressBar maxValue={100} value={50} />);
         var radius = ProgressBarComponent.getRadius();
