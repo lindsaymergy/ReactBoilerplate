@@ -34,8 +34,10 @@ class App extends Component {
         return (
             <div className='app'>
                 <div>
-                    <Salutation />
-
+                    <Salutation words="hi, hello, hey, yep"/>
+                    <Salutation words=" , "/>
+                    <Salutation words="56"/>
+                    
                     <Counter />
 
                 </div>
