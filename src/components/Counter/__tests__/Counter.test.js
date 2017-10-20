@@ -58,5 +58,7 @@ describe('the counter', () => {
         
         // tick() should have been called 5 times.
         expect(CounterComponent.tick).toHaveBeenCalledTimes(5);
+
+        // how do you test an effing timer? :(
     });
 });
