@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import Salutation from '../Salutation';
 
-describe('the hello world component', () => {
+describe('the salutation component', () => {
     it('renders correctly', () => {
         const tree = renderer.create(
             <Salutation />

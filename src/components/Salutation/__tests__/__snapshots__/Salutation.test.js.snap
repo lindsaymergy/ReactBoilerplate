@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the hello world component renders correctly 1`] = `
+exports[`the salutation component renders correctly 1`] = `
 <h1>
   Salutations!
 </h1>

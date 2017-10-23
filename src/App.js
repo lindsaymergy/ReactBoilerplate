@@ -35,6 +35,10 @@ class App extends Component {
                 <Salutation />
                 <Salutation words="Goodbye, Red, Blue, Yeti" />
                 <div>
+                    <Salutation words="hi, hello, hey, yep"/>
+                    <Salutation words=" , "/>
+                    <Salutation words="56"/>
+                    
                     <Counter />
                 </div>
                 <div>
