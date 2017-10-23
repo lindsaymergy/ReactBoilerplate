@@ -10,7 +10,7 @@ import ArticleList from './components/Articles/ArticleList';
 import Greeter from './components/Greeter/Greeter';
 import Button from './components/Button/Button';
 import ProgressBar from './components/ProgressBar/ProgressBar';
-
+import Salutation from './components/Salutation/Salutation';
 import DataApi from './services/DataApi';
 import { data } from './services/data.json';
 
@@ -31,43 +31,27 @@ class App extends Component {
     render(){
         return (
             <div className='app'>
+                <Salutation words="Hello, Hola, Bien Venudo, Hey, Salve, Salu, Gutentag" />
+                <Salutation />
+                <Salutation words="Goodbye, Red, Blue, Yeti" />
                 <div>
-                    <Counter />
-                    <Counter />
-                    <Counter />
-                    <Counter />
-                    <Counter />
-                    <Counter />
-                    <Counter />
+                    <Salutation words="hi, hello, hey, yep"/>
+                    <Salutation words=" , "/>
+                    <Salutation words="56"/>
+                    
                     <Counter />
                 </div>
                 <div>
-                    <ProgressBar maxValue={100} value={45} color="blue" />
-                    <ProgressBar maxValue={1000} value={654} color="cyan" />
-                    <ProgressBar maxValue={10000} value={3532} color="magenta"/>
-                </div>
-                <div className="counters" style={{textAlign: 'center', textTransform: 'uppercase'}}>
-                    <Counter />
-                </div>
-                <div>
-                    <ProgressBar maxValue={10000} value={3532} color="yellow" />
-                    <ProgressBar maxValue={1} value={1}  color="orange" />
                     <ProgressBar maxValue={1000} value={300} color="#cc0" />
                 </div>
                 <div>
                     <Button text="Hello, I am a button!" />
                 </div>
                 <div className="avatars">
-                    <Avatar user="jhaagen" />
                     <Avatar user="dfederspiel" />
-                    <Avatar user="andyglassley" />
-                    <Avatar user="robertmccoy" />
-                    <Avatar user="jonfazzaro" />
-                    <Avatar user="matthewtruty" />
                 </div>
                 <div className="nametags">
                     <NameTag myClasses="big yellow" name="Rick James" />
-                    <NameTag myClasses="big orange" name="David Federspiel" />
                 </div>
                 <div className="greeters" >
                     <Greeter />

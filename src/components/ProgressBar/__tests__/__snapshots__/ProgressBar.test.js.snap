@@ -16,14 +16,15 @@ exports[`the progress bar component renders correctly 1`] = `
         Object {
           "backgroundColor": "red",
           "borderRadius": "15px 0 0 15px",
-          "width": "0%",
+          "maxWidth": "75%",
+          "transition": "width 15s",
         }
       }
     >
       <div
         className="percentage"
       >
-        0
+        75
       </div>
     </div>
   </div>
